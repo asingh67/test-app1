@@ -2,7 +2,7 @@
   "name": "test-app1",
   "version": "1.0.0",
   "description": "Test App for fiddling with express and nodejs",
-  "main": "index.js",
+  "main": "lib/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
