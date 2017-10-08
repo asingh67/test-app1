@@ -5,7 +5,10 @@
   "main": "lib/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "pm2 start lib/server.js --watch"
+    "dev": "pm2 start lib/server.js --watch --interpreter babel-node",
+    "pmlog": "pm2 logs",
+    "stop-all": "pm2 stop all",
+    "delete-all": "pm2 delete all"
   },
   "repository": {
     "type": "git",
@@ -17,12 +20,23 @@
     "url": "https://github.com/asingh67/test-app1/issues"
   },
   "homepage": "https://github.com/asingh67/test-app1#readme",
+  "babel": {
+    "presets": [
+      "react",
+      "env",
+      "stage-2"
+    ]
+  },
   "devDependencies": {
     "babel-eslint": "^8.0.1",
     "eslint": "^4.8.0",
     "eslint-plugin-react": "^7.4.0"
   },
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
     "express": "^4.16.1",
     "express-handlebars": "^3.0.0",
     "pm2": "^2.7.1"
